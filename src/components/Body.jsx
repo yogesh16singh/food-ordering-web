@@ -8,7 +8,7 @@ const Body = () => {
 
     useEffect(() => {
         console.log("useefeect");
-        fetchData();
+        // fetchData();
     }, []);
 
     const fetchData = async () => {
@@ -20,7 +20,7 @@ const Body = () => {
     return (
 
         <>
-            <Search_bar />
+            <Search_bar data={restaurantData} setdata={setRestaurantData} />
             <div className='card_container'>
                 {
                     restaurantData.map(restaurant => {
