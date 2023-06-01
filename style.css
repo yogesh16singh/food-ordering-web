@@ -8,6 +8,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    line-height: normal;
 }
 
 .logo {
@@ -18,9 +19,9 @@
     display: flex;
     list-style-type: none;
     gap: 1.5rem;
-    font-size: 20px;
-    margin-top: 12px;
-    margin-right: 30px;
+    font-size: 23px;
+    margin-top: 22px;
+    margin-right: 85px;
 }
 
 .card_container {
@@ -40,4 +41,13 @@
 .card_img {
     width: 208px;
     height: 150px;
+}
+
+.y_navb_li a {
+    text-decoration: none;
+    color: grey;
+}
+
+.y_navb_li a:hover {
+    color: black;
 }
