@@ -6,10 +6,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Error from './pages/Error.jsx'
 import Contact from './pages/Contact.jsx'
+import Cart from './pages/cart.jsx'
 import Body from './components/Body.jsx'
 import RestaurentDetail from './pages/RestaurentDetail.jsx'
 import Profile from './components/Profile'
 import Shimmer from './components/Shimmer.jsx'
+
 
 
 const About = lazy(() => import("./pages/About.jsx"))
@@ -43,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/restaurentDetail/:id",
         element: <RestaurentDetail></RestaurentDetail>
+      },
+      {
+        path: "/cart",
+        element: <Cart></Cart>
       }
     ]
   }

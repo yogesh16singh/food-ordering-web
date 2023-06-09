@@ -34,7 +34,7 @@ const Body = () => {
         <>
             <Search_bar data={allRestaurantData} setdata={setFilteredRestaurantData} />
             {(filteredRestaurantData.length == 0) && <h1>Matched data not found</h1>}
-            <div className='card_container'>
+            <div className='flex flex-wrap gap-11 mx-16'>
                 {
                     filteredRestaurantData.map(restaurant => {
                         return (

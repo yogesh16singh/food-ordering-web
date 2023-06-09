@@ -5,7 +5,7 @@ const About = () => {
 
     return (
         <>
-            <div>About</div>
+            <div className='underline'>About</div>
 
             <Outlet />
         </>

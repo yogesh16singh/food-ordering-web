@@ -14,10 +14,10 @@ const Search_bar = (props) => {
     }
 
     return (
-        <>
-            <input type="text" value={search} onChange={(e) => { setSearch(e.target.value) }} />
+        <div className='flex my-2  justify-center'>
+            <input className='border-2' type="text" value={search} onChange={(e) => { setSearch(e.target.value) }} />
             <button onClick={() => handleSearch()}> Search</button>
-        </>
+        </div>
     )
 }
 
