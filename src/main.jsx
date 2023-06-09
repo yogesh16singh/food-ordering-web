@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Error from './pages/Error.jsx'
 import Contact from './pages/Contact.jsx'
-import Cart from './pages/cart.jsx'
+import Cart from './pages/Cart.jsx'
 import Body from './components/Body.jsx'
 import RestaurentDetail from './pages/RestaurentDetail.jsx'
 import Profile from './components/Profile'
