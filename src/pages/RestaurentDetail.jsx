@@ -20,9 +20,9 @@ const RestaurentDetail = () => {
         const jsonData = await response.json();
         console.log(jsonData.data.cards[0].card.card.info);
         setSingleRestaurant(jsonData.data.cards[0].card.card.info)
-        setSingleRestaurantMenu(jsonData.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.categories[0].itemCards)
+        setSingleRestaurantMenu(jsonData.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards)
         // console.log(jsonData.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards);
-        console.log(jsonData.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.categories[0].itemCards[0].card.info.name);
+        // console.log(jsonData.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.categories[0].itemCards[0].card.info.name)
     }
     const dispatch = useDispatch();
     const handleClick = (item) => {
@@ -41,7 +41,7 @@ const RestaurentDetail = () => {
 
                 {Object.values(singleRestaurantMenu).map((item) => {
 
-                    return <li key={item.card.info.id} >{item.card.info.name.slice(2)} - <button className="bg-green-400" onClick={() => {
+                    return <li key={item.card.info.id} >{item.card.info.name} - <button className="bg-green-400" onClick={() => {
                         handleClick(item)
                     }}>Add</button></li>
                 })}
