@@ -7,7 +7,7 @@ import { calcTotal, clearCart, decreaseQuantity, deleteItem, increaseQuantity } 
 const cart = () => {
     useEffect(() => {
         dispatch(calcTotal());
-    }, [])
+    })
 
     const cartItems = useSelector(store => store.cart.items)
     const totall = useSelector(store => store.cart.total)
@@ -19,6 +19,7 @@ const cart = () => {
     const singleDelete = (item) => {
         console.log(item)
         dispatch(deleteItem(item))
+
     }
     const incrementQuantity = (item) => {
         dispatch(increaseQuantity(item))
@@ -47,7 +48,12 @@ const cart = () => {
                                 <tr className='w-full ' key={item?.card?.info?.id}>
 
                                     <td className='text-center m-1 p-1 md:w-72'>
-                                        <div className='flex '>  <img className='w-10 h-12' alt='item' src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_100,h_100,c_fill/" + item?.card?.info?.imageId} ></img>
+                                        <div className='flex '>
+                                            {(item.card.info.imageId) &&
+                                                <img className='w-10 h-12' alt='item'
+                                                    src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_100,h_100,c_fill/" + item?.card?.info?.imageId} >
+
+                                                </img>}
                                             <span className='p-2 hidden md:block'>{(item.card.info.name)}</span>
                                         </div>
                                     </td>
