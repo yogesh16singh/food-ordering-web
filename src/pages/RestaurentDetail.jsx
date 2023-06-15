@@ -26,7 +26,10 @@ const RestaurentDetail = () => {
     }
     const dispatch = useDispatch();
     const handleClick = (item) => {
-        dispatch(addItem(item))
+        item.card = { ...item, quantity: 1 };
+        // console.log("addq--", { ...item, quantity: 1 })
+        // console.log("item--", item);
+        dispatch(addItem(item.card))
     }
 
     return (
